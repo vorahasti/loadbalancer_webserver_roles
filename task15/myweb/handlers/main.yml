@@ -1,0 +1,15 @@
+---
+# handlers file for myweb
+- name: webservice
+  service:
+    name: "{{ software }}"
+    state: restarted 
+    enabled: yes
+
+- name: "firewalld"
+  firewalld:
+    port: "{{ hport }}/tcp"
+    state: enabled
+    permanent: yes
+    immediate: yes
+

@@ -1,0 +1,6 @@
+---
+# handlers file for mylb
+- name: Restart load balancer
+  service:
+          name: "haproxy"
+          state: "restarted"

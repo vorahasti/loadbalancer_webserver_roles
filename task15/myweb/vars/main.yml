@@ -1,0 +1,8 @@
+---
+# vars file for myweb
+
+hport : 8080
+software: "httpd"
+doc_root: "/var/www/html"
+conf: "/root/task15/myweb/templates/web.conf"
+

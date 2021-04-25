@@ -1,0 +1,17 @@
+---
+# tasks file for myweb
+- name: "install httpd software"
+  package:
+    name: "{{ software }}"
+    state: present
+
+- name: "to copy file in document root "
+  copy:
+    src: "/root/task15/myweb/files/index.html"
+    dest: "{{ doc_root }}"
+
+- template:
+    src: "{{ conf }}"
+    dest: "/etc/httpd/conf.d"
+  notify: "webservice"
+

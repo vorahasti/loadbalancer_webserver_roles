@@ -1,0 +1,5 @@
+---
+- hosts: 192.168.43.31
+  remote_user: root
+  roles:
+    - mylb
